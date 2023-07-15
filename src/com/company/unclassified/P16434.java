@@ -21,6 +21,7 @@ public class P16434 {
             long h = Long.parseLong(str.nextToken());
 
             if(t==1){
+
                 curHP += (long)(Math.ceil(((double)h/Hatk))-1)*a;
                 HmaxHP = Math.max(curHP,HmaxHP);
             }else{
