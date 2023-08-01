@@ -1,4 +1,4 @@
-package com.company.unclassified;
+package com.company.greedy;
 
 import java.io.*;
 import java.util.*;
