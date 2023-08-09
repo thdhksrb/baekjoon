@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SynapSoft5 {
     public static void main(String[] args) {
-        String input = "0, 0, 1, 8, 2, 2, 8, 9, 0, 3, 4, 0, 0";    //입력
+        String input = "0, 0, 1";    //입력
         String[] str = input.split(", ");
         List<Integer> number = new LinkedList<>();    //값 삭제를 자주하므로 링크드리스트 사용
         int sum = 0;
