@@ -1,4 +1,4 @@
-package com.company.unclassified;
+package com.company.quiz;
 
 import java.util.*;
 
