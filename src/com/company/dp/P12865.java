@@ -11,8 +11,8 @@ public class P12865 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken()); //물품의 수
+        int K = Integer.parseInt(st.nextToken()); //버틸수 있는 무게
 
         int item[][] = new int[N+1][2];
 
@@ -34,5 +34,7 @@ public class P12865 {
         }
 
         System.out.println(dp[N][K]);
+
+
     }
 }
