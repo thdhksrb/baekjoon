@@ -1,4 +1,4 @@
-package com.company;
+package com.company.unclassified;
 
 import java.util.*;
 
