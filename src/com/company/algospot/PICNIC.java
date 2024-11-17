@@ -3,10 +3,10 @@ package com.company.algospot;
 import java.io.*;
 import java.util.*;
 
-public class PICNIC { // 다시
+public class PICNIC {
 
     static boolean[] visit;
-    static int count,n,m;
+    static int count,n,m;  //N : 학생수 M : 페어 수
     static int[][] arr;
 
     public static void main(String[] args) throws IOException{
@@ -31,7 +31,7 @@ public class PICNIC { // 다시
             visit = new boolean[n];
             Arrays.fill(visit,false);
 
-            dfs(0);
+            dfs(0,0);
 
             bw.write(String.valueOf(count));
             bw.newLine();
@@ -44,32 +44,19 @@ public class PICNIC { // 다시
 
     }
 
-    static void dfs(int depth){
+    static void dfs(int depth, int x){
         if(depth >= n/2){
             count++;
             return;
         }
+        for(int i=x;i<m;i++){
 
-        int firstStudent = -1;
-        for(int i=0;i<n;i++){
-            if(!visit[i]){
-                firstStudent = i;
-                break;
+            if(!visit[arr[i][0]] && !visit[arr[i][1]]){
+                visit[arr[i][0]] = visit[arr[i][1]] = true;
+                dfs(depth+1,i+1);
+                visit[arr[i][0]] = visit[arr[i][1]] = false;
             }
         }
 
-        if(firstStudent == -1) return;
-
-        for(int[] pair: arr){
-            int a = pair[0];
-            int b = pair[1];
-
-            if(!visit[a] && !visit[b]){
-                visit[a] = visit[b] = true;
-                dfs(depth + 1);
-                visit[a] = visit[b] = false;
-
-            }
-        }
     }
 }

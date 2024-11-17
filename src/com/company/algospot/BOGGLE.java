@@ -2,7 +2,7 @@ package com.company.algospot;
 
 import java.io.*;
 
-public class Boggle {  //시간 초과 (재귀 -> dp 로 변경 필요)
+public class BOGGLE {  //시간 초과 (재귀 -> dp 로 변경 필요)
 
     static char[][] map;
     static int[] dx;
